@@ -51,7 +51,7 @@ const Calendar = function(props) {
 function makeMonth(date) {
   let weeks = [0,1,2,3,4,5];
   let firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-  if (firstDay === 0) {firstDay = 7};
+
   let monthDays = 32 - new Date(date.getFullYear(), date.getMonth(), 32).getDate();
   let lastDay = new Date(date.getFullYear(), date.getMonth(), monthDays).getDay();
   if (monthDays === 28) {
@@ -59,7 +59,7 @@ function makeMonth(date) {
     if (firstDay === 1) {
       weeks[4] = -1;
     }
-  } else if (((firstDay === 6) || (monthDays === 31)) && ((firstDay === 7) || (monthDays > 31)) ){
+  } else if (((firstDay === 6) || (monthDays === 31)) || ((firstDay === 7) || (monthDays !== 29)) ){
     weeks[5] = -1;
   }
   let app = (
