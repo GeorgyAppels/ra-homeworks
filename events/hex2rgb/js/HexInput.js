@@ -2,7 +2,8 @@
 
 const HexInput = props => {
   function onChange() {
-    props.onChange(this.value);
+    console.log(props.onChange());
+    //props.onChange(props.style.backgroundColor);
   }
 
   return (
