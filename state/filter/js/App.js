@@ -9,7 +9,9 @@ class App extends React.Component {
   }
   filterSelect(filter) {
     console.log(filter);
-    this.state.selected = filter;
+    this.setState({
+      selected: filter
+    });
   }
   projectFilter(projects) {
     return (this.state.selected === 'All')
