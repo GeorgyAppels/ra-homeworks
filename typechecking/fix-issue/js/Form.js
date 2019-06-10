@@ -53,6 +53,3 @@ Form.propTypes = {
   nickname: PropTypes.string,
   is_married: PropTypes.bool
 };
-Form.defaultProps = {
-
-}
