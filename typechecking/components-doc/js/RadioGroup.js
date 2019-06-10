@@ -1,6 +1,7 @@
 'use strict';
 
 const RadioGroup = props => {
+  console.log(props)
   return (
     <div className="form-group">
       <label>{props.label}</label>
@@ -16,3 +17,8 @@ const RadioGroup = props => {
     </div>
   )
 };
+
+RadioGroup.propTypes = {
+  onChange : PropTypes.func,
+  value : PropTypes.oneOf(['муж', 'жен'])
+}
