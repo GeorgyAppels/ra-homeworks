@@ -9,3 +9,11 @@ const TextInput = props => {
     </div>
   )
 };
+
+TextInput.propTypes = {
+  label: PropTypes.oneOf(['Email', 'Имя', 'Фамилия', 'Пароль']),
+  type: PropTypes.oneOf(['email', 'text', 'password']),
+  name: PropTypes.oneOf(['email', 'first_name', 'last_name', 'password']),
+  onChange: PropTypes.func,
+  value: PropTypes.string
+};
