@@ -27,3 +27,17 @@ const Profile = props => {
     </div>
   );
 };
+
+Profile.propTypes = {
+  img : PropTypes.string.isRequired,
+  url: (props, propName, componentName) => {
+    if (!/(id[0-9]+|[A-Za-z0-9_-]+)$/.test(props[propName])) {
+      return new Error(`Invalid prop ${propName} supplied to ${componentName}.`);
+    };
+  },
+  birthday: (props, propName, componentName) => {
+    if (!/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/.test(props[propName])) {
+      return new Error(`Invalid prop ${propName} supplied to ${componentName}.`);
+    };
+  },
+}
