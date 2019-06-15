@@ -11,6 +11,8 @@ const DateInput = props => {
 };
 
 DateInput.propTypes = {
+  label : PropTypes.oneOf(['День Рождения']),
+  name : PropTypes.oneOf(['birthday']),
   onChange : PropTypes.func,
   value: PropTypes.string
 }
