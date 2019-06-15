@@ -15,5 +15,6 @@ TextInput.propTypes = {
   type: PropTypes.oneOf(['email', 'text', 'password']),
   name: PropTypes.oneOf(['email', 'first_name', 'last_name', 'password']),
   onChange: PropTypes.func,
-  value: PropTypes.string
+  value: PropTypes.string,
+  required: PropTypes.bool
 };
