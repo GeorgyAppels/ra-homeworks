@@ -29,6 +29,8 @@ const Profile = props => {
 };
 
 Profile.propTypes = {
+  first_name : PropTypes.string,
+  last_name : PropTypes.string,
   img : PropTypes.string.isRequired,
   url: (props, propName, componentName) => {
     if (!/(id[0-9]+|[A-Za-z0-9_-]+)$/.test(props[propName])) {
