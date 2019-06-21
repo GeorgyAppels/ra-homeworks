@@ -1,8 +1,3 @@
-const ReactRouter = window.ReactRouterDOM
-const Router = ReactRouterDOM.HashRouter
-const Route = ReactRouterDOM.Route
-const NavLink = ReactRouterDOM.NavLink
-
 
 class Menu extends  React.Component {
   render() {
